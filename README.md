@@ -53,36 +53,3 @@ The pipeline runs in **four main stages**, orchestrated by `run.py`:
 
 
 python scripts/run.py
-# All intermediate and final JSON files are timestamped and stored in their respective folders for traceability.
-## 📁 Folder Structure
-.
-├── scripts/
-│   ├── collect_links.py
-│   ├── scrape_data.py
-│   ├── process_fingerprints.py
-│   ├── filter_by_title.py
-│   └── run.py
-├── links/
-├── scraped/
-├── fingerprints/
-├── grouped_titles/
-├── env/               # Ignored virtual environment
-└── README.md
-## ⚡ Example Output
-
-After running the full pipeline, your folder will contain:
-
-* `links/links_2025-10-18.json`
-* `scraped/scraped_2025-10-18.json`
-* `fingerprints/fingerprints_2025-10-18.json`
-* `grouped_titles/grouped_titles_2025-10-18.json`
-
-Each stage logs progress and prints where files are saved.
-
----
-
-## 🔍 Notes
-
-* The pipeline is **modular**, so you can run any step independently for testing or updates.
-* Designed for **daily scraping and time-based analysis** — fingerprints and grouped titles are saved with timestamps.
-* Metadata includes page title, URL, language, sentiment, keywords, load time, and can be extended with ML-based classifications for actors and content types.
